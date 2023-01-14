@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML & CSS Project</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/e9ac91991a.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <i class="fa-solid fa-user" id="logo"></i>
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#information">Information</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>Web developer</p>
+          <h1>Hi, I'm <span>Hosam</span><br />Alghazali From Palestine</h1>
+        </div>
+      </div>
+    </div>
+    <!-- about -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="./images/background.jpg" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              A passionate and motivated individual in programming field, who is
+              looking forward to develop his skills by an opportunity for a
+              challenging role in a reputable organization to improve my
+              knowledge about new and emerging trends in the IT sector
+              technical, and programming.
+            </p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>
+                  <span>Languages</span><br />Fluent in both, oral and written
+                  communications in English and Arabic.
+                </li>
+                <li>
+                  <span>Programming Language</span><br />Excellent knowledge in
+                  Python Programming Language.
+                </li>
+                <li><span>Learn</span><br />Willingness to learn.</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>Python</span><br />I built a project in Python
+                  Programming Language during the IT Foundation Course, it is a
+                  library project, through which to add, delete and modify.
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>High School</span><br />Hasan AL Harazeen School.</li>
+                <li><span>GPA</span><br />97.7% .</li>
+                <li>
+                  <span>Academic Year</span><br />2022 (Scientific Stream).
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Why I want to join the program  -->
+    <div id="information">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <h1 class="sub-title">More Information</h1>
+          </div>
+          <div class="about-col-2 content">
+            <h2 class="h2-style">Why I want to join the program:</h2>
+            <p>
+              Since I was a kid, I have had a passion for knowing everything
+              related to computers ,I grew up with this passion ,and during the
+              previous years I heard a lot about programming, and realized that
+              the future is for programmers, Since that time I decided that my
+              future job would be a web developer, Currently, I have had
+              completed high school exams and got an average of %97,7 in the
+              scientific stream. During my high school I heard about Gaza Sky
+              Geeks that they provide courses for programming, then I realized
+              that this is the starting point for achieving my dream. after that
+              I applied and got accepted and graduated from the IT Foundations
+              course with Gaza Sky Geeks in order to be able and qualified to
+              join the Code Academy.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- contact -->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fas fa-paper-plane"></i>hosam.m.elghazali@gmail.com</p>
+            <p><i class="fas fa-phone-square-alt"></i>+970597794152</p>
+            <div class="social-icons">
+              <a href="https://github.com/HosamElGhazali"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a href="https://www.freecodecamp.org/HosamElGhazali"
+                ><i class="fa-brands fa-free-code-camp"></i
+              ></a>
+              <a href="https://www.codewars.com/users/HosamElGhazali"
+                ><img src="./images/blob.jpeg"
+              /></a>
+              <a href="https://github.com/HosamElGhazali/Alarm-clock"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </div>
+            <a
+              href="./images/Hosam  El Ghazali ,CV .pdf"
+              download
+              class="btn btn2"
+              >Download CV</a
+            >
+          </div>
+          <div class="contact-right">
+            <form action="">
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </body>
+</html>
